@@ -32,8 +32,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cypress-
 
+      - name: Grant permissions to Cypress binary
+        run: chmod +x ./node_modules/.bin/cypress  
+        
       - name: Install Cypress
         run: npx cypress install
-        
+
       - name: Run Cypress tests
         run: npm run test
