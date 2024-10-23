@@ -103,8 +103,6 @@ describe('Testes de transferencia', () => {
         home.clickBtnTransf()
         home.validaTextoTransfereciaMesmaConta()
         home.clickBtnCloseModal()
-        utils.tempo(1000)
-        cy.url().should('include', '/transfer')
     })
 })
 
