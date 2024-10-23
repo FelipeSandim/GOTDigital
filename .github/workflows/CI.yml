@@ -22,12 +22,10 @@ jobs:
           node-version: '16' 
 
       - name: Install dependencies
-        run: npm install
-        working-directory: ./
+        run: npm install 
 
       - name: Grant permissions
-        run: chmod +x ./frontend/node_modules/.bin/cypress 
+        run: chmod +x ./node_modules/.bin/cypress
 
       - name: Run Cypress tests
-        run: npm run test
-        working-directory: ./
+        run: npm run test 
