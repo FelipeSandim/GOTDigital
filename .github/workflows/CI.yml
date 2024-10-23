@@ -19,11 +19,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '16' 
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./
+
+      - name: Grant permissions
+        run: chmod +x ./frontend/node_modules/.bin/cypress 
 
       - name: Run Cypress tests
         run: npm run test
-        working-directory: ./ 
+        working-directory: ./
